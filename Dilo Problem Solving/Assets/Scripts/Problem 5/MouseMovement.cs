@@ -19,7 +19,7 @@ public class MouseMovement : MonoBehaviour
         //if (Input.GetButtonDown("Fire1")) GetScreenPoint();
 
         // Menggerakkan Player ke posisi mouse jika klik kiri
-        if (Input.GetButtonDown("Fire1")) MouseMove();
+        if (Input.GetButton("Fire1")) MouseMove();
         //Debug.Log(rb2D.velocity.magnitude);
     }
 
