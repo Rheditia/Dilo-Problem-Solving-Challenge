@@ -8,6 +8,7 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (playerPrefab == null) return;
         Instantiate(playerPrefab, transform.position, transform.rotation);
     }
 }

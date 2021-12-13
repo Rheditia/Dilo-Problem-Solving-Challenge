@@ -47,3 +47,6 @@ TagManager:
   - name: Player
     uniqueID: 3709186313
     locked: 0
+  - name: Crystal
+    uniqueID: 3846441727
+    locked: 0
