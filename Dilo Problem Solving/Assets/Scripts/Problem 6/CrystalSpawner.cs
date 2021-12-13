@@ -7,12 +7,10 @@ public class CrystalSpawner : MonoBehaviour
     [SerializeField] GameObject prefab;
     [SerializeField] SpawnPointConfig[] spawnPoint;
 
-    //[SerializeField] int spawnAmount = 3;
-    //[SerializeField] float spawnPointRadius = 1;
 
     void Start()
     {
-        SpawnCrystal();    
+        SpawnCrystal();
     }
 
     private void SpawnCrystal()
@@ -35,12 +33,4 @@ public class CrystalSpawner : MonoBehaviour
             Gizmos.DrawWireSphere(spawnPoint[x].spawnTransform.position, spawnPoint[x].radius);
         }
     }
-}
-
-[System.Serializable]
-public struct SpawnPointConfig
-{
-    public Transform spawnTransform;
-    public float radius;
-    public int amount;
 }

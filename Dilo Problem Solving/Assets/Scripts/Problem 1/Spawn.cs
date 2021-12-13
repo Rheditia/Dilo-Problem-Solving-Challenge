@@ -6,7 +6,7 @@ public class Spawn : MonoBehaviour
 {
     [SerializeField] GameObject playerPrefab;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (playerPrefab == null) return;
         Instantiate(playerPrefab, transform.position, transform.rotation);
