@@ -100,19 +100,19 @@ MonoBehaviour:
   spawnPoint:
   - spawnTransform: {fileID: 5024210055535818214}
     radius: 1.6
-    amount: 5
+    amount: 3
   - spawnTransform: {fileID: 5053437984371683701}
     radius: 1.6
-    amount: 5
+    amount: 3
   - spawnTransform: {fileID: 3425444106986846425}
     radius: 1.6
-    amount: 5
+    amount: 3
   - spawnTransform: {fileID: 6332247223501627993}
     radius: 1.6
-    amount: 5
+    amount: 3
   - spawnTransform: {fileID: 5327233244646573927}
     radius: 1.2
-    amount: 5
+    amount: 3
 --- !u!1 &1327985813889028628
 GameObject:
   m_ObjectHideFlags: 0

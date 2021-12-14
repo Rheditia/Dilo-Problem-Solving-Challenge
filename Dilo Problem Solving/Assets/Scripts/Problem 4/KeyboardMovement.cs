@@ -18,7 +18,7 @@ public class KeyboardMovement : MonoBehaviour
         baseDrag = rb2D.drag;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         // menghaluskan pengereman ketika pergerakan dihentikan
         if (!Input.GetButton("Horizontal") && !Input.GetButton("Vertical"))
