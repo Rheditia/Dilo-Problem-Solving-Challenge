@@ -133,6 +133,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  dashTime: 0.5
+  dashDelay: 3
+  dashSpeed: 10
+  dashParticlePrefab: {fileID: 4004337347463916470, guid: 7274ee3268c410b40b62d297f9dd7533,
+    type: 3}
 --- !u!114 &1134879433605210896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,5 +150,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c70032481a4f37c4ca458ccfe5c33657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreController: {fileID: 7793883653751006566, guid: 4ffd7a5f8c28cc441acda0e0e6a19c3f,
-    type: 3}

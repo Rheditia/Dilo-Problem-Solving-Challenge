@@ -9,9 +9,9 @@ public class MouseMovement : MonoBehaviour
     private Rigidbody2D rb2D;
     [SerializeField] float speed = 5f;
 
-    private bool isMoving = false;
+    //private bool isMoving = false;
     private bool isDashing = false;
-    [SerializeField] float dashTime = 0.5f;
+    [SerializeField] float dashTime = 0.1f;
     [SerializeField] float dashDelay = 3f;
     [SerializeField] float dashSpeed = 10f;
     [SerializeField] GameObject dashParticlePrefab;
@@ -43,7 +43,7 @@ public class MouseMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && !isDashing) MouseMove();
 
         // dash ketika space ditekan, player bergerak dan dash sudah tersedia
-        else if (Input.GetButtonDown("Jump") && isMoving && dashDelay >= 3) StartCoroutine(Dash());
+        else if (Input.GetButtonDown("Jump") && (dashDelay >= 3) && (rb2D.velocity != Vector2.zero)) StartCoroutine(Dash()); // && isMoving
 
         // Menghentikan Pergerakan ketika mouse di klik kanan dan tidak sedang dash
         else if (Input.GetButtonDown("Fire2") && !isDashing) StopMovement();
@@ -80,7 +80,7 @@ public class MouseMovement : MonoBehaviour
 
     private void MouseMove()
     {
-        isMoving = true;
+        //isMoving = true;
 
         Vector3 targetDestination = GetScreenPoint();
 
@@ -101,7 +101,7 @@ public class MouseMovement : MonoBehaviour
 
     private void StopMovement()
     {
-        isMoving = false;
+        //isMoving = false;
         rb2D.velocity = Vector2.zero;
     }
 }

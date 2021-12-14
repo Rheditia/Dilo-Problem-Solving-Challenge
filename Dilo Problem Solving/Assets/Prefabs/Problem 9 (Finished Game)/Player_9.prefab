@@ -132,13 +132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc5ad968187cf9499240dbc9c4c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5
   dashTime: 0.1
   dashDelay: 3
   dashSpeed: 10
   dashParticlePrefab: {fileID: 4004337347463916470, guid: 7274ee3268c410b40b62d297f9dd7533,
-    type: 3}
-  dashGauge: {fileID: 5435761744128391609, guid: c5035c5e12d62e549bff66d1dfe8ff12,
     type: 3}
 --- !u!114 &3858824042387323213
 MonoBehaviour:

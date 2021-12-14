@@ -11,7 +11,7 @@ public class PoolingHitDetector : MonoBehaviour
     // 9
     [SerializeField] GameObject crystalParticlePrefab;
 
-    private void Awake()
+    private void Start()
     {
         scoreController = FindObjectOfType<ScoreController>();
         crystalPool = FindObjectOfType<CrystalPool>();
@@ -27,10 +27,12 @@ public class PoolingHitDetector : MonoBehaviour
 
             // Play particle effect
             GameObject crystalParticle = Instantiate(crystalParticlePrefab);
-            crystalParticle.transform.position = collision.transform.position;
-            crystalParticle.GetComponent<ParticleSystem>().Play();
-
-            StartCoroutine(destroyParticle(crystalParticle));
+            if (crystalParticle != null)
+            {
+                crystalParticle.transform.position = collision.transform.position;
+                crystalParticle.GetComponent<ParticleSystem>().Play();
+                StartCoroutine(destroyParticle(crystalParticle));
+            }
 
             // Despawn crystal yang dihit lalu respawn setelah 3 detik
             crystalPool.DespawnToPool(collision.gameObject);

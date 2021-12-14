@@ -14,7 +14,7 @@ public class CrystalPoolSpawner : MonoBehaviour
     [SerializeField] SpawnPointConfig[] spawnPoint;
 
 
-    void Start()
+    void Awake()
     {
         crystalPool = FindObjectOfType<CrystalPool>();
 
