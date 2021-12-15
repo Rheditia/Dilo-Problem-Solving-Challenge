@@ -16,61 +16,11 @@ public class GameManager : MonoBehaviour
         scoreController = FindObjectOfType<ScoreController>();
     }
 
-    public void Problem1()
-    {
-        destroyOtherInstance();
-        StartCoroutine(startProblem(0));
-    }
-
-    public void Problem2()
-    {
-        destroyOtherInstance();
-        StartCoroutine(startProblem(1));
-    }
-
-    public void Problem3()
-    {
-        destroyOtherInstance();
-        StartCoroutine(startProblem(2));
-    }
-
-    public void Problem4()
-    {
-        destroyOtherInstance();
-        StartCoroutine(startProblem(3));
-    }
-
-    public void Problem5()
-    {
-        destroyOtherInstance();
-        StartCoroutine(startProblem(4));
-    }
-
-    public void Problem6()
-    {
-        destroyOtherInstance();
-        StartCoroutine(startProblem(5));
-    }
-
-    public void Problem7()
+    public void Problem(int index)
     {
         scoreController.resetScore();
         destroyOtherInstance();
-        StartCoroutine(startProblem(6));
-    }
-
-    public void Problem8()
-    {
-        scoreController.resetScore();
-        destroyOtherInstance();
-        StartCoroutine(startProblem(7));
-    }
-
-    public void Problem9()
-    {
-        scoreController.resetScore();
-        destroyOtherInstance();
-        StartCoroutine(startProblem(8));
+        StartCoroutine(startProblem(index));
     }
 
     private IEnumerator startProblem(int index)
